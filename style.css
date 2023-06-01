@@ -547,6 +547,8 @@ body{
     height: 100%;
     width: 100%;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
 
 }
 
@@ -990,6 +992,8 @@ body{
         right: -250px;
         /*background-color: #e7e2eb;*/
         backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+        -moz-backdrop-filter: blur(100px);
         padding-top: 60px;
         transition: right 0.5s ease;
         display: block;
