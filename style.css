@@ -54,7 +54,9 @@ body{
 .nav-box h1 {
     text-align: center;
     font-size: 40px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Century Gothic';
+    color: white;
+   /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #1f1f1f;
    
     -webkit-text-stroke: 1px ;
@@ -63,7 +65,7 @@ body{
     -webkit-text-stroke-color: rgb(255, 255, 255);
     -ms-text-stroke: 1px;
     -ms-text-stroke-color: rgb(255, 255, 255);
-    color : transparent;
+    color : transparent;*/
 
 }
 
