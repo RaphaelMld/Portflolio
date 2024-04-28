@@ -55,17 +55,22 @@
 
     <div class="boxPerso">
         <div class="reveal">
-            <div class="moi">
-                <img src="img/fleche.png" alt="fleche" class="fleche">
-                <p>Ça c'est moi !</p>
-            </div>
+
             <div id="boxColor">
                 <div class="box-perso">
 
-                    <img src="img/moi.jpg" alt="photo" class="photo">
+                    <img src="img/avatar.png" alt="photo" class="photo">
                     <div>
                         <h2>Qui suis-je ?</h2>
-                        <p>Je m'appelle Raphaël, j'ai 18 ans et je suis actuellement en première année de licence Informatique à l'Université de Tours. Je suis passionné par l'informatique depuis plusieurs années et je souhaite en faire mon métier. Je suis quelqu'un de très curieux et j'aime apprendre de nouvelles choses.</p>
+                        <p>
+                            Je m'appelle Raphaël, j'ai 
+                            <?php 
+                            $dateNaissance = "12-11-2004";
+                            $aujourdhui = date("d-m-Y");
+                            $diff = date_diff(date_create($dateNaissance), date_create($aujourdhui));
+                            echo $diff->format('%y'); ?> 
+                            ans et je suis actuellement en seconde année de licence Informatique à l'Université de Tours. Je suis passionné par l'informatique depuis plusieurs années et je souhaite en faire mon métier. Je suis quelqu'un de très curieux et j'aime apprendre de nouvelles choses.
+                        </p>
                     </div>
                 </div>
             </div>
