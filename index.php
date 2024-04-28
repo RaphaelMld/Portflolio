@@ -6,18 +6,12 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="img/logoFav.png">
-    <!--[if IE]>
-        <style>
-            .nav-box h1{
-                -webkit-text-stroke: 0.2px;
-            }
-        </style>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
 
 </head>
 <body>
     <div class="nav-box">
-        <a href="index.php"><img src="img/logoRm.png" alt="logo" class="logo"></a>
+        <a href="#"><img src="img/logoRm.png" alt="logo" class="logo"></a>
         <h1>Raphaël Malidin</h1>  
         <div class="nav-lien">
             <div class="top">
@@ -102,8 +96,8 @@
             <h2>Mes études</h2>
             <div class="frise">
                 <div id="lycee"><div id="Ping"></div><p class="TextLycee"><span>Septembre 2019 - </span>Entrée au lycée Jacques de Vaucanson - Tours</p></div>
-                <div id="bac"> <div id="Ping"></div><p class="TextBac"><span>Juin 2022 - </span>Obtention du Baccalauréat Général <br>Spécialités : Mathématique et NSI <br> Mention Bien</p></div>
-                <div id="fac"><div id="Ping"></div><p class="TextFac"><span>Septembre 2022 - </span>Entrée en première année de la Licence Informatique à l'Université de Tours</p></div>
+                <div id="bac"> <div id="Ping"></div><p class="TextBac"><span>Juin 2022 - </span>Obtention du Baccalauréat Général <br>Spécialités : Mathématiques et NSI <br> Mention Bien</p></div>
+                <div id="fac"><div id="Ping"></div><p class="TextFac"><span>Septembre 2022 - </span>Entrée en première année de Licence Informatique à l'Université de Tours</p></div>
                 <div id="soon"><div id="Ping"></div><p class="TextSoon">Prochainement...</p></div>
 
             </div>
@@ -113,19 +107,17 @@
         <div class="reveal">
             <h2>Mes projets</h2>
             <div class="projet">
-                <h3>Site de Bibliotèque en ligne</h3>
-                <p>Projet réalisé en groupe de cinq personnes dans le cadre de la formation. Pour tous les adeptes de lecture qui souhaitent gérer leur collection de livres, notre produit est un système de gestion de livres qui permet d'avoir à un seul endroit l'intégralité de sa collection, à la différence de nos concurrents, 
-                    <span class="popBook">Bookollection</span> 
-                permet de rechercher n'importe quel livre pour voir sa fiche produit, et directement aller les acheter sur d'autres sites via un lien cliquable.</p>
-                <p>Le site est disponible à l'adresse suivante : <a href="https://www.bookollection.fr/">bookollection.fr</a></p>
+                <h3>Plateforme de bibliothèque en ligne</h3>
+                <p>Projet réalisé en groupe de cinq personnes dans le cadre de la licence. <span class="popBook">Bookollection</span> est une plateforme web innovante qui offre aux passionnés de lecture la possibilité de gérer facilement leur collection de livres tout en favorisant les échanges autour de leurs lectures préférées.</p>
+                <p id="none">Le site est disponible à l'adresse suivante : <a href="https://www.bookollection.fr/">bookollection.fr</a></p>
             </div>
             <div class="projet">
                 <h3>Escape Game en ligne</h3>
-                <p>Projet réalisé en groupe de deux personnes pendant mon année de première. <span>Escape'Geek</span> est un site interractif, qui permet à l'utilisateur de vivre une experience immersif dans le domaine de l'informatique.</p>
+                <p>Projet réalisé en groupe de deux personnes pendant mon année de première. <span>Escape'Geek</span> est un site interactif, qui permet à l'utilisateur de vivre une experience immersive dans le domaine de l'informatique.</p>
             </div>
             <div class="projet">
                 <h3>Portfolio personnel</h3>
-                <p>Projet réalisé durant mes vacances d'été 2023, ce projet est simplement un site personnel afin de recenser quelques information à mon sujet </p>
+                <p>Réalisé durant mes vacances d'été 2023, ce projet est simplement un site personnel proposant un aperçu de mon parcours et de mes réalisations. </p>
             </div>
         </div>
     </div>
@@ -205,6 +197,8 @@
 
         var topH = document.querySelector(".topH");
         var btnEtudesH = document.querySelector(".btnEtudesH");
+        var btnProjetsH = document.querySelector(".btnProjetsH");
+
 
         topH.addEventListener('click', () => {
             window.scrollTo({
