@@ -304,7 +304,7 @@ body{
     bottom: 0;
     background-color: #53088d;
     border-radius: 10px;
-    width: 40%;
+    width: 50%;
     animation-duration: 1s;
     animation-name: slideinPy;
 }
@@ -318,7 +318,7 @@ body{
     bottom: 0;
     background-color: #53088d;
     border-radius: 10px;
-    width: 30%;
+    width: 70%;
     animation-duration: 1s;
     animation-name: slideinJ;
 }
@@ -347,7 +347,7 @@ body{
     bottom: 0;
     background-color: #53088d;
     border-radius: 10px;
-    width: 20%;
+    width: 40%;
     animation-duration: 1s;
     animation-name: slideinJs;
 }
@@ -361,7 +361,21 @@ body{
     bottom: 0;
     background-color: #53088d;
     border-radius: 10px;
-    width: 70%;
+    width: 80%;
+    animation-duration: 1s;
+    animation-name: slideinS;
+}
+
+.cpp::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #53088d;
+    border-radius: 10px;
+    width: 60%;
     animation-duration: 1s;
     animation-name: slideinS;
 }
