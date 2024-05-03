@@ -14,7 +14,7 @@ body{
 .reveal-visible{
     opacity: 1;
     transform: translateY(0);
-    transition: 1s cubic-bezier(0.5, 0, 0, 1);
+    transition: 0.5s cubic-bezier(0.5, 0, 0, 1);
 }
 
 
@@ -995,6 +995,16 @@ body{
         left : 70px;
         width: 100px;
         top: -30px;
+    }
+
+    .reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: none; 
+    }
+
+    .reveal{
+        opacity: 1;
     }
 
     /*-------------------Menu Hamburger none------------------*/
