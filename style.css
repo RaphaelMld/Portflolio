@@ -1005,6 +1005,7 @@ body{
 
     .reveal{
         opacity: 1;
+        transform: translateY(0);
     }
 
     /*-------------------Menu Hamburger none------------------*/
