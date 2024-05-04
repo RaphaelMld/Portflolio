@@ -26,7 +26,7 @@ function afficherLettreSuivante() {
         
         terminalText.textContent += " ";
         terminal_cursor.classList.remove("stop-animation");
-        setTimeout(afficherChargement, 2000);
+        setTimeout(afficherChargement, 1000);
 
     }
     
