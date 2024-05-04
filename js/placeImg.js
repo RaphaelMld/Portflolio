@@ -2,28 +2,32 @@ window.addEventListener('load', () => {
     let imagesContainer = document.getElementById('iconBackground');
     let windowWidth = window.innerWidth;
     let imageCount;
-    let imagePath;
+    let imagePath = 'img/large/';
 
     function updateImageCount() {
         if (windowWidth > 1200) {
             imageCount = 6;
-            imagePath = 'img/large/';
+            
         } else if (windowWidth > 800) {
             imageCount = 4;
-            imagePath = 'img/medium/';
         } else {
             imageCount = 2;
-            imagePath = 'img/small/';
         }
     }
 
     function placeImages() {
         imagesContainer.innerHTML = ''; 
         const imagePositions = [];
+        contientImage = [];
+        let nombreAleatoire=Math.floor(Math.random() * 12) + 1;;
 
         for (let i = 1; i <= imageCount; i++) {
+            while (contientImage.includes(nombreAleatoire) != false) {
+                nombreAleatoire = Math.floor(Math.random() * 12) + 1;
+            }
+            contientImage.push(nombreAleatoire);
             const img = document.createElement('img');
-            img.src = imagePath + 'image' + i + '.svg'; 
+            img.src = imagePath + 'image' + nombreAleatoire + '.svg'; 
 
             let randomX, randomY;
             do {
