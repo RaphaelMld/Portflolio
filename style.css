@@ -1125,8 +1125,7 @@ body{
     width: 20%;
     border-radius: 6px;
     z-index: 1;
-
-   /* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;*/
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
 .blocAcces p {
@@ -1308,7 +1307,7 @@ body{
   }
   
   .terminal_body {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.9);
     height: calc(100% - 30px);
     padding-top: 2px;
     margin-top: -1px;
@@ -1381,7 +1380,7 @@ body{
     font-size: 12px;
     margin-top: 1px;
     margin-left: -4px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Andale Mono', monospace;
 
 }
 
