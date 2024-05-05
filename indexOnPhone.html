@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="stylePhone.css">
     <link rel="icon" type="image/x-icon" href="img/logoFav.png">
     <meta name="viewport" content="width=device-width" />
+    <script>
+        if (window.innerWidth > 768) {
+            window.location.href = "index.html";
+        }
+    </script>
 
 </head>
 <body>
@@ -19,9 +24,7 @@
         <button id="enterbutton">Click me</button>
     </div>
     <script>
-        if (window.innerWidth > 768) {
-            window.location.href = "index.html";
-        }
+
         var enterbutton = document.getElementById("enterbutton");
         var loader = document.querySelector(".loader");
         enterbutton.onclick = function() {

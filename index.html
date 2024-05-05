@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="img/logoFav.png">
     <meta name="viewport" content="width=device-width" />
-
+    <script>
+        if (window.innerWidth < 768) {
+            window.location.href = "indexOnPhone.html";
+        }
+        
+    </script>
 </head>
 <body style="overflow-x: hidden;">
     <!-- <div id="iconBackground" class="iconBackground">
@@ -73,12 +78,7 @@
         </div>
     </div>
     
-    <script>
-        if (window.innerWidth < 768) {
-            window.location.href = "indexOnPhone.html";
-        }
-        
-    </script>
+
     <script src="js/openSite.js"></script>
     <script src="js/placeImg.js"></script>
     <script src="js/animateIcon.js"></script>
