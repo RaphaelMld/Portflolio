@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raphaël Malidin</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylePhone.css">
+    <link rel="icon" type="image/x-icon" href="img/logoFav.png">
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+    <div id="iconBackground" class="iconBackground"></div>
+    <div id="container">
+        <div class="card">
+            <div class="loader">
+                <span></span>
+              </div>
+        </div>
+        <button id="enterbutton">Click me</button>
+    </div>
+    <script>
+        if (window.innerWidth > 768) {
+            window.location.href = "index.html";
+        }
+        var enterbutton = document.getElementById("enterbutton");
+        var loader = document.querySelector(".loader");
+        enterbutton.onclick = function() {
+            loader.style.display = "block";
+            setInterval(() => {
+                window.location.href = "site.html";
+            }, 2000);
+            
+        }
+       
+
+
+    </script>
+    <script src="js/placeImg.js"></script>
+    <script src="js/animateIcon.js"></script>
+</body>
+</html>

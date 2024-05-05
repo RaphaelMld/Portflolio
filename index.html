@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width" />
 
 </head>
-<body>
+<body style="overflow-x: hidden;">
     <!-- <div id="iconBackground" class="iconBackground">
         <img src="img/code-svgrepo-com.svg" class="imageR" style="top: 150px; left: 200px;">
         <img src="img/cloud-server-svgrepo-com.svg" class="imageR" style="top: 230px; left: 600px;">
@@ -73,6 +73,11 @@
         </div>
     </div>
     
+    <script>
+        if (window.innerWidth < 768) {
+            window.location.href = "indexOnPhone.html";
+        }
+    </script>
     <script src="js/openSite.js"></script>
     <script src="js/placeImg.js"></script>
     <script src="js/animateIcon.js"></script>

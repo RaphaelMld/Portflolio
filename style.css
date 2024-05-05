@@ -1095,6 +1095,7 @@ body{
     height: 100%;
     z-index: -1;
     filter: blur(0.06em);
+
 }
 
 .iconBackground img {
@@ -1119,7 +1120,7 @@ body{
 
 .blocAcces {
     position: absolute ;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -1236,12 +1237,15 @@ body{
 /******************Terminal******************/
 
 .containerTerminal {
-    width: 450px;
-    height: 270px;
-    position: relative;
-    margin: 0 auto;
-    margin-top: 50px;
+    width: 30%;
+    height: 320px;
+    position: absolute;
+    top: 10%;
+    left: 35%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
     
   }
   
