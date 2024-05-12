@@ -1,12 +1,12 @@
-window.addEventListener('load', () => {
-    let imagesContainer = document.getElementById('iconBackground');
-    let windowWidth = window.innerWidth;
-    let windowHeight = window.innerHeight;
+window.addEventListener('DOMContentLoaded', async () => {
+    
+
+    const imagesContainer = document.getElementById('iconBackground');
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
     let imageCount;
     let imagePath = 'img/large/';
-    let imagePositions = [];
-
-
+    let ecartImage = 400;
 
     function updateImageCount() {
         if (windowWidth > 1200) {
@@ -14,31 +14,39 @@ window.addEventListener('load', () => {
         } else if (windowWidth > 800) {
             imageCount = 4;
         } else {
-            imageCount = 2;
+            imageCount = 3;
+            ecartImage = 300;
         }
     }
 
-    function placeImages() {
+    async function fetchImages() {
+        const imagePromises = [];
+        for (let i = 1; i <= 12; i++) {
+            imagePromises.push(fetch(`${imagePath}image${i}.svg`).then(response => response.blob()));
+        }
+        return await Promise.all(imagePromises);
+    }
+
+    function placeImages(images) {
         imagesContainer.innerHTML = '';
-        imagePositions = [];
+        const imagePositions = [];
         const contientImage = [];
 
-        for (let i = 1; i <= imageCount; i++) {
-            let nombreAleatoire = Math.floor(Math.random() * 12) + 1;
-
+        for (let i = 0; i < imageCount; i++) {
+            let nombreAleatoire = Math.floor(Math.random() * 12);
             while (contientImage.includes(nombreAleatoire)) {
-                nombreAleatoire = Math.floor(Math.random() * 12) + 1;
+                nombreAleatoire = Math.floor(Math.random() * 12);
             }
-
             contientImage.push(nombreAleatoire);
+
             const img = document.createElement('img');
-            img.src = imagePath + 'image' + nombreAleatoire + '.svg';
+            img.src = URL.createObjectURL(images[nombreAleatoire]);
 
             let randomX, randomY;
             do {
                 randomX = Math.random() * (windowWidth - 200);
                 randomY = Math.random() * (windowHeight - 200);
-            } while (collisionDetected(randomX, randomY));
+            } while (collisionDetected(randomX, randomY, imagePositions));
 
             imagePositions.push({ x: randomX, y: randomY });
 
@@ -50,12 +58,12 @@ window.addEventListener('load', () => {
         }
     }
 
-    function collisionDetected(x, y) {
+    function collisionDetected(x, y, imagePositions) {
         for (const position of imagePositions) {
             const otherX = position.x;
             const otherY = position.y;
             const distance = Math.sqrt((x - otherX) ** 2 + (y - otherY) ** 2);
-            if (distance < 400) {
+            if (distance < ecartImage) {
                 return true;
             }
         }
@@ -63,6 +71,7 @@ window.addEventListener('load', () => {
     }
 
     updateImageCount();
-    placeImages();
-
-    });
+    const images = await fetchImages();
+    placeImages(images);
+    
+});
