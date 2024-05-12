@@ -1,9 +1,9 @@
 body{
-    /*background-color: #1f1f1f;*/
     background-color: #14121F;
-    /* color : #ffffff; */
     color :#E2DDFE;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /*-----------reveal----------*/
@@ -149,7 +149,9 @@ body{
 }
 
 
-
+.boxPerso{
+    width: 100%;
+}
 
 
 .box-perso{
@@ -222,7 +224,7 @@ body{
     border-radius: 10px;
     padding:20px;
     padding-bottom: 40px;
-    /* background-color: #171717; */
+    border : 1px solid #473876;
     background-color: #291F43;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     width:450px;
@@ -526,7 +528,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    /* background-color:#171717; */
+    border : 1px solid #473876;
     background-color: #291F43;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);    /*background-color: #171717;*/
 }
