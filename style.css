@@ -128,16 +128,6 @@ body{
 }
 /*-------------------PRESENTATION------------------*/
 
-.fleche{
-    position : absolute;
-    left : 40px;
-    top : 50px;
-    width: 100px;
-    height: 100px;
-    z-index: 1;
-    animation-duration: 1s;
-}
-
 
 .moi p{
     position: absolute;
@@ -153,6 +143,10 @@ body{
 
 .boxPerso{
     width: 100%;
+    margin-top: 200px;
+
+    
+    
 }
 
 
@@ -162,17 +156,19 @@ body{
     align-items: center;
     justify-content: space-between;
     width : 80%;
-    margin-top:200px;
+    margin-top:10px;
     margin-left: 100px;
     margin-right: auto;
     padding-top: 50px;
     padding-bottom: 50px;
+    z-index: 1;
 }
 
 .box-perso img{
     width: 330px;
     height: 330px;
     margin-right: 30px;
+
 }
 
 .box-perso h2{
@@ -189,20 +185,79 @@ body{
 
 }
 
-#boxColor{
-    width:100%;
-    position: relative;
+
+
+
+
+
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+ .gradient {
+    position: absolute;
+    top: 250px;
     left: 0;
-    right: 0;
-    background-image: url(img/backgroundBlur.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -2;
-}
+    --size: 750px;
+    --sizeh:400px;
+    --speed: 50s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(90deg, rgba(27,21,37,1) 0%, rgba(60,46,105,1) 35%, rgba(125,102,217,1) 100%);
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  
+  @media (min-width: 720px) {
+    .gradient {
+      --size: 500px;
+    }
+  }
+  
+
+
 
 #espace{
     height: 300px;
 }
+
+
+
+@keyframes move {
+    from {
+      transform: rotate(0deg) scale(12) translateX(-20px);
+    }
+    to {
+      transform: rotate(360deg) scale(18) translateX(20px);
+    }
+  }
+  
+  @keyframes dots-animation {
+    0% {
+      text-shadow: 0em 0em 7px hsla(0, 100%, 50%, 0.9);
+    }
+    25% {
+      text-shadow: .5em .5em 7px hsla(90, 100%, 50%, 0.9),
+                   -.5em -.5em 7px hsla(180, 100%, 50%, 0.9);
+    }
+    50% {
+      text-shadow: .5em -.5em 7px hsla(270, 100%, 50%, 0.9),
+                   -.5em .5em 7px hsla(360, 100%, 50%, 0.9);
+    }
+    100% {
+      text-shadow: 0em 0em 7px hsla(0, 100%, 50%, 0.9);
+    }
+  }
+
 
 
 /*-------------------COMPETENCES------------------*/
