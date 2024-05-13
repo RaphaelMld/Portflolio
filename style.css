@@ -187,10 +187,6 @@ body{
 
 
 
-
-
-
-
 @keyframes rotate {
     0% {
       transform: rotate(0deg);
@@ -208,7 +204,7 @@ body{
     --sizeh:400px;
     --speed: 50s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-  
+
     width: var(--size);
     height: var(--size);
     filter: blur(calc(var(--size) / 5));
