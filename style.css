@@ -199,7 +199,7 @@ body{
  .gradient {
     position: absolute;
     top: 250px;
-    left: 0;
+    left: 250px;
     --size: 750px;
     --sizeh:400px;
     --speed: 50s;
