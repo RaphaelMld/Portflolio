@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="img/logoFav.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Noto+Sans+Symbols:wght@600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width" />
 
 </head>
@@ -43,7 +46,7 @@
         </div>
 
     <div class="arrowUp">
-        <img src="img/arrow_up.png"/>
+        <img src="img/fleche.svg"/>
     </div>
 
 
@@ -64,7 +67,6 @@
         </div>
     </div>
     <div id="espace"></div>
-    <!-- <div id="boxColor"> -->
     <div class="box-competence">
         <div class="reveal">
             <h2>Mes compétences</h2>
@@ -84,7 +86,6 @@
             </div>
         </div>
     </div>
-    <!-- </div> -->
     <div id="box-etudes">
         <div class="reveal">
             <h2>Mes études</h2>
@@ -113,14 +114,7 @@
                 <p>Projet réalisé en groupe de cinq personnes dans le cadre de la licence. <span class="popBook">Bookollection</span> est une plateforme web innovante qui offre aux passionnés de lecture la possibilité de gérer facilement leur collection de livres tout en favorisant les échanges autour de leurs lectures préférées.</p>
                
             </div>
-            <div class="projet">
-                <h3>Portfolio personnel</h3>
-                <p>Réalisé durant mes vacances d'été 2023, ce projet est simplement un site personnel proposant un aperçu de mon parcours et de mes réalisations. </p>
-            </div>
-            <div class="projet">
-                <h3>Escape Game en ligne</h3>
-                <p>Projet réalisé en groupe de deux personnes pendant mon année de première. <span>Escape'Geek</span> est un site interactif, qui permet à l'utilisateur de vivre une experience immersive dans le domaine de l'informatique.</p>
-            </div>
+
 
         </div>
     </div>
@@ -136,11 +130,11 @@
         <h3>Me contacter </h3>
         <h3>-</h3>
             <a href="mailto:raphael.malidin@etu.univ-tours.fr" class="box-mail">
-                <img src="img/mail.png" alt="mail" class="mail">
+                <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 2C0.447715 2 0 2.44772 0 3V12C0 12.5523 0.447715 13 1 13H14C14.5523 13 15 12.5523 15 12V3C15 2.44772 14.5523 2 14 2H1ZM1 3L14 3V3.92494C13.9174 3.92486 13.8338 3.94751 13.7589 3.99505L7.5 7.96703L1.24112 3.99505C1.16621 3.94751 1.0826 3.92486 1 3.92494V3ZM1 4.90797V12H14V4.90797L7.74112 8.87995C7.59394 8.97335 7.40606 8.97335 7.25888 8.87995L1 4.90797Z" fill="#E2DDFE" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                 <p>raphael.malidin@etu.univ-tours.fr</p>
             </a>
             <a href="https://www.linkedin.com/in/raphael-malidin-373669241/" class="box-linkedin" target="_blank">
-                <img src="img/linkedin.png" alt="linkedin" class="linkedin">
+                <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 1C1.44772 1 1 1.44772 1 2V13C1 13.5523 1.44772 14 2 14H13C13.5523 14 14 13.5523 14 13V2C14 1.44772 13.5523 1 13 1H2ZM3.05 6H4.95V12H3.05V6ZM5.075 4.005C5.075 4.59871 4.59371 5.08 4 5.08C3.4063 5.08 2.925 4.59871 2.925 4.005C2.925 3.41129 3.4063 2.93 4 2.93C4.59371 2.93 5.075 3.41129 5.075 4.005ZM12 8.35713C12 6.55208 10.8334 5.85033 9.67449 5.85033C9.29502 5.83163 8.91721 5.91119 8.57874 6.08107C8.32172 6.21007 8.05265 6.50523 7.84516 7.01853H7.79179V6.00044H6V12.0047H7.90616V8.8112C7.8786 8.48413 7.98327 8.06142 8.19741 7.80987C8.41156 7.55832 8.71789 7.49825 8.95015 7.46774H9.02258C9.62874 7.46774 10.0786 7.84301 10.0786 8.78868V12.0047H11.9847L12 8.35713Z" fill="#E2DDFE" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                 <p>Raphaël Malidin</p>
             </a>
         </div>
@@ -195,12 +189,10 @@
         openBtn.onclick = openNav;
         closeBtn.onclick = closeNav;
 
-        /* Set the width of the side navigation to 250px */
         function openNav() {
         menuHamburger.classList.add("active");
         }
 
-        /* Set the width of the side navigation to 0 */
         function closeNav() {
         menuHamburger.classList.remove("active");
         }

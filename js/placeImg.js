@@ -1,12 +1,10 @@
-window.addEventListener('DOMContentLoaded', async () => {
-    
-
-    const imagesContainer = document.getElementById('iconBackground');
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+window.addEventListener('load', () => {
+    let imagesContainer = document.getElementById('iconBackground');
+    let windowWidth = window.innerWidth;
+    let windowHeight = window.innerHeight;
     let imageCount;
-    let imagePath = 'img/large/';
-    let ecartImage = 400;
+    let imagePath = 'img/svg/';
+    let imagePositions = [];
 
     function updateImageCount() {
         if (windowWidth > 1200) {
@@ -14,64 +12,57 @@ window.addEventListener('DOMContentLoaded', async () => {
         } else if (windowWidth > 800) {
             imageCount = 4;
         } else {
-            imageCount = 3;
-            ecartImage = 300;
+            imageCount = 2;
         }
     }
 
-    async function fetchImages() {
-        const imagePromises = [];
-        for (let i = 1; i <= 12; i++) {
-            imagePromises.push(fetch(`${imagePath}image${i}.svg`).then(response => response.blob()));
-        }
-        return await Promise.all(imagePromises);
-    }
-
-    function placeImages(images) {
-        imagesContainer.innerHTML = '';
-        const imagePositions = [];
+    function placeImages() {
+        imagesContainer.innerHTML = ''; 
+        imagePositions = [];
         const contientImage = [];
 
-        for (let i = 0; i < imageCount; i++) {
-            let nombreAleatoire = Math.floor(Math.random() * 12);
-            while (contientImage.includes(nombreAleatoire)) {
-                nombreAleatoire = Math.floor(Math.random() * 12);
-            }
-            contientImage.push(nombreAleatoire);
+        for (let i = 1; i <= imageCount; i++) {
+            let nombreAleatoire = Math.floor(Math.random() * 12) + 1;
 
+            while (contientImage.includes(nombreAleatoire)) {
+                nombreAleatoire = Math.floor(Math.random() * 12) + 1;
+            }
+
+            contientImage.push(nombreAleatoire);
             const img = document.createElement('img');
-            img.src = URL.createObjectURL(images[nombreAleatoire]);
+            img.src = imagePath + 'image' + nombreAleatoire + '.svg';
 
             let randomX, randomY;
             do {
                 randomX = Math.random() * (windowWidth - 200);
                 randomY = Math.random() * (windowHeight - 200);
-            } while (collisionDetected(randomX, randomY, imagePositions));
+            } while (collisionDetected(randomX, randomY));
 
             imagePositions.push({ x: randomX, y: randomY });
-
             img.style.left = randomX + 'px';
             img.style.top = randomY + 'px';
             img.classList.add('imageR');
+            const delay = Math.random() * 5; 
+            const randomAnimationStyle = Math.floor(Math.random() * 3) + 1; 
+            img.style.animation = `levitate_${randomAnimationStyle} 25s Ease-in-out ${delay}s infinite`; 
 
             imagesContainer.appendChild(img);
         }
     }
 
-    function collisionDetected(x, y, imagePositions) {
+    function collisionDetected(x, y) {
         for (const position of imagePositions) {
             const otherX = position.x;
             const otherY = position.y;
             const distance = Math.sqrt((x - otherX) ** 2 + (y - otherY) ** 2);
-            if (distance < ecartImage) {
+            if (distance < 400) {
                 return true;
             }
         }
         return false;
     }
 
+
     updateImageCount();
-    const images = await fetchImages();
-    placeImages(images);
-    
+    placeImages();
 });
