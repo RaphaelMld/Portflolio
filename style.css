@@ -199,9 +199,8 @@ body{
  .gradient {
     position: absolute;
     top: 250px;
-    left: 250px;
-    --size: 750px;
-    --sizeh:400px;
+    left: 170px;
+    --size: 600px;
     --speed: 50s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
@@ -213,9 +212,16 @@ body{
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
   
-  @media (min-width: 720px) {
+  @media (max-width: 720px) {
     .gradient {
-      --size: 500px;
+      --size: 400px;
+      left:0
+    }
+  }
+  @media (max-width: 400px) {
+    .gradient {
+      --size: 300px;
+      left:0
     }
   }
   
